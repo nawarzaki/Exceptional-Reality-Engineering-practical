@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Exceptional Reality - Engineering - Luxury Homes - About - Interior - Design - Architecture - Structure -
+    Construction - Art - Practical Engineering - Exceptional Reality Engineering - Converters - Unit</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style converter.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+</head>
+
+<div id="social">
+  <a class="twit" href="#" title="Twitter">Twitter</a>
+  <a class="fbook" href="#" title="Facebook">Facebook</a>
+  <a class="insta" href="#" title="Instagram">Instagram</a>
+</div>
+
+<div class="white-wood">
+  <header class="medium-fade shadow">
+    <div class="wrapper">
+      <div id="logo">
+        <h1>Exceptional Reality Engineering Group</h1>
+        <h2>Exceptional Reality Engineering Group</h2>
+      </div>
+    </div><!-- .wrapper -->
+    <div id="navbar" class="light-fade">
+      <div class="wrapper">
+        <nav class="clearfix">
+          <a href="index.html">Form & Space</a><a href="new-properties.html">Interior Design</a><a
+            href="real-estate-listings.html">construction</a><a href="market-report.html">plans</a><a
+            href="contact.html">Contact</a><a class="selected" href="Converters.html">Converters</a>
+        </nav>
+      </div><!-- .wrapper -->
+    </div><!-- #navbar -->
+
+  </header>
+
+  <div class="mass">
+
+    <div class="container">
+      <h2>Weight Converter</h2>
+
+     
+      </div>
+
+    </div> <!--container-->
+
+
+
+  </div><!--mass-->
+
+  <div class="length">
+
+    <div class="container">
+      <h2>Length Converter</h2>
+
+      
+      </div>
+
+
+  </div><!--length-->
+
+  <div class="tempreature">
+
+    <div class="container">
+      <h2>Tempreature Converter</h2>
+
+     
+    </div> <!--container-->
+
+
+
+  </div> <!--tempreature-->
+
+  <div class="speed" id="speed">
+
+    <div class="container">
+      <h2>Speed Converter</h2>
+
+      <div id="speedData">
+       
+      </div>
+     
+      
+    </div> <!--container-->
+
+  </div><!--speed-->
+
+
+
+
+
+<br>
+<br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+  &copy; 2018 Exceptional Reality Engineering. All Rights Reserved.
+</footer>
+
+</div><!-- .white-wood -->
+
+<script>
+
+
+//on mouse hover
+let speed = document.getElementById("speed")
+let speedData = document.getElementById("speedData")
+let x = document.createElement('input')
+x.type = "number"
+
+speed.addEventListener('mouseover', () =>{
+  console.log("hghgh")
+  //speedData.appendChild()
+  //speedData.appendChild(x)
+  speedData.innerHTML = '<div class="input-wrapper"><label for="mph">Miles Per Hour:</label><input type="number" id="mph" placeholder="MPH" /></div><div class="input-wrapper"><label for="kph">Kilometres per hour:</label><input type="number" id="kph" placeholder="KPH" /> </div><div class="input-wrapper"><label for="kno">knots:</label><input type="number" id="kno" placeholder="Knots" /></div><div class="input-wrapper"><label for="mach">Mach:</label><input type="number" id="mach" placeholder="Mach" /></div>'
+  let mph = document.getElementById("mph")
+  mph.type = 'number'
+  mph.innerHTML = 0
+})
+
+  // weightConverter
+
+  let kgRef = document.getElementById("kg");
+  let lbRef = document.getElementById("lb");
+  let ozRef = document.getElementById("oz");
+  let grRef = document.getElementById("gr");
+  let stRef = document.getElementById("st");
+
+  let convertFromKg = () => {
+    let kg = kgRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    lbRef.value = (kg * 2.205).toFixed(6);
+    ozRef.value = (kg * 35.274).toFixed(6);
+    grRef.value = (kg * 1000).toFixed(2);
+    stRef.value = (kg / 6.35029318).toFixed(6);
+
+  };
+  let convertFromLb = () => {
+    let lb = lbRef.value;
+    kgRef.value = (lb / 2.205).toFixed(6);
+    ozRef.value = (lb * 16).toFixed(6);
+    grRef.value = (lb * 453.5923).toFixed(6);
+    stRef.value = (lb * 0.071429).toFixed(5);
+  };
+  let convertFromOz = () => {
+    let oz = ozRef.value;
+    kgRef.value = (oz / 35.274).toFixed(9);
+    lbRef.value = (oz / 16).toFixed(4);
+    grRef.value = (oz * 28.3495231).toFixed(6);
+    stRef.value = (oz / 224).toFixed(9);
+  };
+
+  let convertFromGr = () => {
+    let gr = grRef.value;
+    kgRef.value = (gr / 1000).toFixed(6);
+    lbRef.value = (gr / 453.5923).toFixed(4);
+    ozRef.value = (gr * 0.352739619).toFixed(6);
+    stRef.value = (gr / 6350.29318).toFixed(12);
+  };
+
+  let convertFromSt = () => {
+    let st = stRef.value;
+    kgRef.value = (st * 6.350).toFixed(6);
+    lbRef.value = (st * 14).toFixed(6);
+    ozRef.value = (st * 224).toFixed(6);
+    grRef.value = (st * 6350.29318).toFixed();
+  };
+
+
+  kgRef.addEventListener("input", convertFromKg);
+  lbRef.addEventListener("input", convertFromLb);
+  ozRef.addEventListener("input", convertFromOz);
+  grRef.addEventListener("input", convertFromGr);
+  stRef.addEventListener("input", convertFromSt);
+
+
+
+
+  // weightConverter
+
+  // LengthConverter
+
+  let ftRef = document.getElementById("ft");
+  let incRef = document.getElementById("inc");
+  let yaRef = document.getElementById("ya");
+  let miRef = document.getElementById("mi");
+  let kiRef = document.getElementById("ki");
+  let meRef = document.getElementById("me");
+  let cmRef = document.getElementById("cm");
+  let mmRef = document.getElementById("mm");
+
+  let convertFromFt = () => {
+    let ft = ftRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    incRef.value = (ft * 12).toFixed(2);
+    yaRef.value = (ft / 3).toFixed(4);
+    miRef.value = (ft / 5280).toFixed(5);
+    kiRef.value = (ft / 3281).toFixed(6);
+    meRef.value = (ft / 3.281).toFixed(6);
+    cmRef.value = (ft * 30.48).toFixed(2);
+    mmRef.value = (ft * 304.8).toFixed(2)
+
+  };
+  let convertFromIn = () => {
+    let inc = incRef.value;
+    ftRef.value = (inc / 12).toFixed(3);
+    yaRef.value = (inc / 36).toFixed(7);
+    miRef.value = (inc / 63360).toFixed(10);
+    kiRef.value = (inc / 39370).toFixed(8);
+    meRef.value = (inc / 39.37).toFixed(4);
+    cmRef.value = (inc * 2.54).toFixed(2);
+    mmRef.value = (inc * 25.4).toFixed(2)
+  };
+  let convertFromYa = () => {
+    let ya = yaRef.value;
+    ftRef.value = (ya * 3).toFixed(2);
+    incRef.value = (ya * 36).toFixed(2);
+    miRef.value = (ya / 1760).toFixed(6);
+    kiRef.value = (ya / 1094).toFixed(6);
+    meRef.value = (ya / 1.094).toFixed(3);
+    cmRef.value = (ya * 91.44).toFixed(2);
+    mmRef.value = (ya * 914.4).toFixed(2)
+  };
+
+  let convertFromMi = () => {
+    let mi = miRef.value;
+    ftRef.value = (mi * 5280).toFixed(0);
+    incRef.value = (mi * 63360).toFixed(0);
+    yaRef.value = (mi * 1760).toFixed(0);
+    kiRef.value = (mi * 1.60934).toFixed(6);
+    meRef.value = (mi * 1609.34).toFixed(2);
+    cmRef.value = (mi * 160934).toFixed(0);
+    mmRef.value = (mi * 1609000).toFixed(1)
+  };
+
+  let convertFromKi = () => {
+    let ki = kiRef.value;
+    ftRef.value = (ki * 3280.84).toFixed(3);
+    incRef.value = (ki * 39370.1).toFixed(3);
+    yaRef.value = (ki * 1093.61).toFixed(3);
+    miRef.value = (ki / 1.609).toFixed(6);
+    meRef.value = (ki * 1000).toFixed(2);
+    cmRef.value = (ki * 100000).toFixed(2);
+    mmRef.value = (ki * 1000000).toFixed(0)
+  };
+
+  let convertFromMe = () => {
+    let me = meRef.value;
+    ftRef.value = (me * 3.281).toFixed(3);
+    incRef.value = (me * 39.37).toFixed(3);
+    yaRef.value = (me * 1.094).toFixed(3);
+    miRef.value = (me / 1609).toFixed(9);
+    kiRef.value = (me / 1000).toFixed(4);
+    cmRef.value = (me * 100).toFixed(2);
+    mmRef.value = (me * 1000).toFixed(0)
+  };
+
+  let convertFromCm = () => {
+    let cm = cmRef.value;
+    ftRef.value = (cm / 30.48).toFixed(3);
+    incRef.value = (cm / 2.54).toFixed(3);
+    yaRef.value = (cm / 91.44).toFixed(3);
+    miRef.value = (cm / 160900).toFixed(6);
+    meRef.value = (cm / 100).toFixed(3);
+    kiRef.value = (cm / 100000).toFixed(6);
+    mmRef.value = (cm * 10).toFixed(0)
+  };
+
+  let convertFromMm = () => {
+    let mm = mmRef.value;
+    ftRef.value = (mm / 304.8).toFixed(3);
+    incRef.value = (mm / 25.4).toFixed(3);
+    yaRef.value = (mm / 914.4).toFixed(6);
+    miRef.value = (mm / 1609000).toFixed(6);
+    meRef.value = (mm / 1000).toFixed(3);
+    kiRef.value = (mm / 1000000).toFixed(6);
+    cmRef.value = (mm / 100).toFixed(2)
+  };
+
+
+  ftRef.addEventListener("input", convertFromFt);
+  incRef.addEventListener("input", convertFromIn);
+  yaRef.addEventListener("input", convertFromYa);
+  miRef.addEventListener("input", convertFromMi);
+  kiRef.addEventListener("input", convertFromKi);
+  meRef.addEventListener("input", convertFromMe);
+  cmRef.addEventListener("input", convertFromCm);
+  mmRef.addEventListener("input", convertFromMm);
+
+
+
+
+
+  // weightConverter
+
+
+  // tempreature 
+
+  let celRef = document.getElementById("cel");
+  let fahRef = document.getElementById("fah");
+  let kelRef = document.getElementById("kel");
+
+  let convertFromCel = () => {
+    let cel = celRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    fahRef.value = (cel * 1.8 + 32).toFixed(2);
+    kelRef.value = (cel * 1 + 273.15).toFixed(2);
+  };
+
+  let convertFromFah = () => {
+    let fah = fahRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    celRef.value = ((fah - 32) / 1.8).toFixed(2);
+    kelRef.value = ((fah - 32) / 1.8 + 273.15).toFixed(2);
+
+  };
+
+
+  let convertFromKel = () => {
+    let kel = kelRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    fahRef.value = ((kel - 273.15) * 1.8 + 32).toFixed(2);
+    celRef.value = (kel - 273.15).toFixed(2);
+
+  };
+
+  celRef.addEventListener("input", convertFromCel);
+  fahRef.addEventListener("input", convertFromFah);
+  kelRef.addEventListener("input", convertFromKel);
+
+
+
+  // speed
+
+
+  let mphRef = document.getElementById("mph");
+  let kphRef = document.getElementById("kph");
+  let knoRef = document.getElementById("kno");
+  let machRef = document.getElementById("mach");
+
+  let convertFromMph = () => {
+    let mph = mphRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    kphRef.value = (mph * 1.609344).toFixed(2);
+    knoRef.value = (mph / 1.150779).toFixed(2);
+    machRef.value = (mph /761.207).toFixed(6);
+
+  };
+
+  let convertFromKph = () => {
+    let kph = kphRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    mphRef.value = (kph / 1.609344).toFixed(2);
+    knoRef.value = (kph / 1.852).toFixed(2);
+    machRef.value = (kph / 1225.044).toFixed(6);
+
+  };
+
+  let convertFromKno = () => {
+    let kno = knoRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    mphRef.value = (kno * 1.150779).toFixed(2);
+    kphRef.value = (kno * 1.852).toFixed(2);
+    machRef.value = (kno / 661.4708).toFixed(6);
+  };
+
+  let convertFromMach = () => {
+    let mach = machRef.value;
+    //toFixed(2) limits the decimals to 2 digits.
+    mphRef.value = (mach * 761.207).toFixed(2);
+    kphRef.value = (mach * 1225.044).toFixed(2);
+    knoRef.value = (mach * 661.4708).toFixed(2);
+  };
+
+  
+  mphRef.addEventListener("input", convertFromMph);
+  kphRef.addEventListener("input", convertFromKph);
+  knoRef.addEventListener("input", convertFromKno);
+  machRef.addEventListener("input", convertFromMach);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
